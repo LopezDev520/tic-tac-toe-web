@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.turn {
+  & p {
+    font-size: 30px;
+  }
+}
+
+.board {
+  display: flex;
+  flex-direction: column-reverse;
+
+  padding: 10px;
+  border: 10px solid black;
+  border-radius: 20px;
+
+  filter: drop-shadow(2px 3px 10px black);
+
+  .row {
+    display: flex;
+    .square {
+      margin: 5px;
+      width: 100px;
+      height: 100px;
+    
+      border: 5px solid black;
+
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+      font-weight: bold;
+      user-select: none;
+      
+      &.color-red {
+        color: red;
+      }
+
+      &.color-blue {
+        color: blue;
+      }
+
+      &.free:hover {
+        border: 5px dashed black;
+      }
+    }
+  }
+}
+
+.alert {
+  padding: 20px;
+  margin: 20px;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  border-radius: 20px;
+  border: 3px solid black;
+
+  filter: drop-shadow(10px 13px 15px black);
+
+  display: none;
+
+  &.draw {
+    background-color: gray;
+  }
+
+  &.winner {
+    background-color: greenyellow;
+  }
+}
+
+.reset-button {
+  margin: 10px;
+  padding: 20px;
+
+  background-color: rgb(105, 105, 227);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 3px solid black;
+  user-select: none;
+
+  filter: drop-shadow(2px 3px 10px black);
+
+  display: none;
+
+  &:hover {
+    background-color: rgb(84, 84, 180);
+  }
+}
