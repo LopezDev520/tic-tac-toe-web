@@ -25,8 +25,6 @@ function repaintBoard () {
       divSquare.className = `square ${square === " " ? "free" : "busy"}`
       divSquare.innerHTML = square
   
-      console.log(divSquare.className)
-
       divSquare.onclick = () => {
         if(!(divSquare.className === "square busy color-red" || divSquare.className === "square busy color-blue")) {
           tictactoe.mark(`${x + 1}x${y + 1}`)

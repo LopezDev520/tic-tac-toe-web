@@ -32,7 +32,6 @@ export default class TicTacToe {
 
     this.turn = this.turn === 0 ? 1 : 0
     this.checkWinner()
-    console.log(this.boardIsFull())
   }
 
   checkWinner() {
@@ -78,7 +77,6 @@ export default class TicTacToe {
   }
 
   designWinner(symbol) {
-    console.log(`${symbol} is the winner`)
     this.printBoard()
     this.onGame = false
 
@@ -104,16 +102,12 @@ export default class TicTacToe {
   }
 
   printBoard() {
-    console.log("  | 1 2 3")
-    console.log("--|------")
     this.board.forEach((row, index) => {
       let listString = row.toString()
       listString = listString.replace("[", "")
       listString = listString.replace("]", "")
       listString = listString.replace(",", " ")
       listString = listString.replace(",", " ")
-
-      console.log(`${index + 1} | ${listString}`)
     })
   }
 
